@@ -1,0 +1,54 @@
+/* Ховаємо меню налаштувань (три крапки справа) */
+#MainMenu {
+  visibility: hidden;
+}
+
+/* Ховаємо футер "Made with Streamlit" */
+footer {
+  visibility: hidden;
+}
+
+/* Ховаємо кольорову смужку зверху */
+header[data-testid="stHeader"] {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Ховаємо кнопку Deploy */
+.stDeployButton {
+  display: none !important;
+}
+[data-testid="stDeployButton"] {
+  display: none !important;
+}
+button[kind="header"] {
+  display: none !important;
+}
+
+/* Додатково: трохи зменшуємо відступи зверху */
+.block-container {
+  padding-top: 1rem;
+}
+
+/* Додаємо лінії для таблиць */
+[data-testid="stDataFrame"] table {
+  border-collapse: collapse !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+[data-testid="stDataFrame"] th,
+[data-testid="stDataFrame"] td {
+  border: 1px solid #e0e0e0 !important;
+  padding: 8px !important;
+}
+
+/* Ховаємо значки посилань (ланцюжки) біля заголовків */
+[data-testid="stMarkdownContainer"] h1 a,
+[data-testid="stMarkdownContainer"] h2 a,
+[data-testid="stMarkdownContainer"] h3 a {
+  display: none !important;
+}
+
+/* На випадок, якщо структура HTML трохи інша (залежить від версії) */
+.anchor-link {
+  display: none !important;
+}
