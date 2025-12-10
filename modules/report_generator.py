@@ -5,6 +5,7 @@
 import pandas as pd
 from datetime import datetime
 from typing import List, Dict
+from datetime import datetime, timedelta
 
 
 def generate_results_table(results_data: List[Dict]) -> pd.DataFrame:
@@ -77,8 +78,9 @@ def get_report_filename() -> str:
     Returns:
         str: Назва файлу у форматі identification_report_YYYYMMDD_HHMMSS.csv
     """
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    return f"identification_report_{timestamp}.csv"
+
+    kyiv_time = datetime.utcnow() + timedelta(hours=2)
+    return f"identification_report_{kyiv_time.strftime('%Y-%m-%d_%H-%M-%S')}.csv"
 
 
 def calculate_statistics(results_data: List[Dict]) -> Dict:
