@@ -52,3 +52,126 @@ button[kind="header"] {
 .anchor-link {
   display: none !important;
 }
+
+/* --- КАСТОМНИЙ ФУТЕР (Нижня плашка) --- */
+.footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  color: #808080;
+  text-align: center;
+
+  /* Повернули комфортний відступ */
+  padding: 10px 0;
+  font-size: 12px;
+
+  border-top: 1px solid #e0e0e0;
+  z-index: 999;
+}
+
+/* !!! ФІКС ВІДСТУПУ ЗНИЗУ !!! 
+   Прибираємо зайвий відступ у самого параграфа тексту, 
+   щоб він був ідеально по центру */
+.footer-container p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ============================================================
+   --- ФІКС САЙДБАРУ (ВІДСТУПИ ЛІНІЇ) ---
+   ============================================================ */
+
+/* 1. СПИСОК ФАЙЛІВ */
+[data-testid="stSidebar"] [data-testid="stFileUploader"] section {
+  max-height: 35vh;
+  overflow-y: auto !important;
+}
+
+/* Стискаємо рядки списку */
+[data-testid="stSidebar"] [data-testid="stFileUploader"] section > div > div {
+  padding-top: 0px !important;
+  padding-bottom: 2px !important;
+  line-height: 1.2 !important;
+}
+
+/* Прибираємо нижній відступ у блоку завантаження, щоб лінія могла підійти ближче */
+[data-testid="stSidebar"] .stFileUploader {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 2. ЛІНІЯ (HR) - НАЛАШТУВАННЯ ВІДСТУПІВ */
+[data-testid="stSidebar"] hr {
+  /* Підтягуємо лінію ВГОРУ до зображень */
+  margin-top: 0px !important;
+
+  /* Відштовхуємо кнопку ВНИЗ від лінії */
+  margin-bottom: 40px !important;
+}
+
+/* 3. КНОПКА */
+[data-testid="stSidebar"] .stButton {
+  margin-top: 0 !important;
+}
+
+/* Скролбар */
+[data-testid="stSidebar"]
+  [data-testid="stFileUploader"]
+  section::-webkit-scrollbar {
+  width: 5px;
+}
+[data-testid="stSidebar"]
+  [data-testid="stFileUploader"]
+  section::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* --- СТИЛІ ДЛЯ КАРТОК СТАТИСТИКИ (DASHBOARD) --- */
+
+.stats-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Щоб на мобільному переносилось */
+}
+
+.stat-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  background-color: #fff;
+  min-width: 160px;
+  flex: 1; /* Рівномірне розтягування */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.stat-label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  font-family: sans-serif;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  font-family: sans-serif;
+}
+
+/* Кольори */
+.value-neutral {
+  color: #2c3e50;
+}
+
+.value-error {
+  color: #ff4d4f; /* Червоний */
+}
+
+.value-success {
+  color: #28c76f; /* Зелений */
+}
