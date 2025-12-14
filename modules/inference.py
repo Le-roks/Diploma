@@ -9,7 +9,7 @@ def load_model_file(path_to_model):
         model = tf.keras.models.load_model(path_to_model)
         return model
     except Exception as e:
-        st.error(f"Критична помилка: Не вдалося завантажити файл моделі! {e}")
+        st.error(f"Критична помилка: не вдалося завантажити файл моделі! {e}")
         return None
 
 def predict_image(model, img_tensor):

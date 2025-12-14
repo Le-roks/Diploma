@@ -202,16 +202,18 @@ elif st.session_state.results_df is not None:
         }
     )
     
-    # --- ЕКСПОРТ ---
+# --- ЕКСПОРТ ---
     # Створюємо копію для експорту
     df_export = df.drop(columns=['Фото']).copy()
     
-    # Форматуємо число 99.24 у рядок "99.24%"
-    # Це гарантує, що в CSV буде правильний вигляд і Excel не домножить це ще раз
+    # Форматуємо відсотки (це ми робимо тут, тому в модуль передаємо вже готовий текст)
     df_export['Впевненість'] = df_export['Впевненість'].apply(lambda x: f"{x:.2f}%")
     
+    # Генеруємо CSV (тепер функція проста і не робить зайвого)
     csv_text = generate_csv_report(df_export.to_dict('records'))
     csv_bytes = csv_text.encode('utf-8-sig')
+    
+    # Отримуємо назву файлу (час рахується всередині функції в модулі)
     report_filename = get_report_filename()
     
     st.download_button(
