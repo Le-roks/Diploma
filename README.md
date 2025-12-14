@@ -171,3 +171,11 @@ Diploma/
 ## 👨‍💻 Автор
 
 Терещенко Валерія
+
+## Публічна версія
+
+Вебдодаток розгорнуто на хмарній платформі **Streamlit Community Cloud** і доступний для використання онлайн. Ви можете протестувати роботу алгоритму без встановлення Python локально.
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fruit-and-vegetable-damage-detection.streamlit.app/)
+
+🔗 **Пряме посилання:** [https://fruit-and-vegetable-damage-detection.streamlit.app/](https://fruit-and-vegetable-damage-detection.streamlit.app/)
