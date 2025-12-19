@@ -48,12 +48,11 @@ button[kind="header"] {
   display: none !important;
 }
 
-/* На випадок, якщо структура HTML трохи інша (залежить від версії) */
 .anchor-link {
   display: none !important;
 }
 
-/* --- КАСТОМНИЙ ФУТЕР (Нижня плашка) --- */
+/* --- КАСТОМНИЙ ФУТЕР */
 .footer-container {
   position: fixed;
   left: 0;
@@ -71,19 +70,12 @@ button[kind="header"] {
   z-index: 999;
 }
 
-/* !!! ФІКС ВІДСТУПУ ЗНИЗУ !!! 
-   Прибираємо зайвий відступ у самого параграфа тексту, 
-   щоб він був ідеально по центру */
 .footer-container p {
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* ============================================================
-   --- ФІКС САЙДБАРУ (ВІДСТУПИ ЛІНІЇ) ---
-   ============================================================ */
-
-/* 1. СПИСОК ФАЙЛІВ */
+/*  СПИСОК ФАЙЛІВ */
 [data-testid="stSidebar"] [data-testid="stFileUploader"] section {
   max-height: 35vh;
   overflow-y: auto !important;
@@ -130,7 +122,6 @@ button[kind="header"] {
 }
 
 /* --- СТИЛІ ДЛЯ КАРТОК СТАТИСТИКИ (DASHBOARD) --- */
-
 .stats-container {
   display: flex;
   gap: 20px;
